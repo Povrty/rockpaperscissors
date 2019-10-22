@@ -1,9 +1,13 @@
 .row{
   text-align:center;
-  
+
 }
 #choices{
   display:flex;
   justify-content:space-between;
-  
+
+}
+
+h1{
+  font-family: 'Ubuntu', sans-serif;
 }
