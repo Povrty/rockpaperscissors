@@ -3,7 +3,7 @@
 
 <head>
   <title>RPS Game</title>
-  <!-- Link CSS here -->
+  <link rel="icon" href="https://img.icons8.com/windows/32/000000/hand-rock.png">
   <link type='text/css' rel='stylesheet' href='css/style.css' />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,14 +22,17 @@
     <h1>Rock Paper Scissors</h1>
     <div class="button">
         <a class="rock"><i class="fa fa-hand-rock-o" style="font-size:144px"></i></a>
-        <a><i class="fa fa-hand-paper-o button" style="font-size:144px"></i></a>
-        <a><i class="fa fa-hand-peace-o" style="font-size:144px"></i></a>
+        <a class="paper"><i class="fa fa-hand-paper-o button" style="font-size:144px"></i></a>
+        <a class="scissors"><i class="fa fa-hand-peace-o" style="font-size:144px"></i></a>
     </div>
 
       <div id="choices" class="row">
         <div>
           <h4>User Choice</h4>
           <p id="userChoice"></p>
+          <a id="rock"><i class="fa fa-hand-rock-o" style="font-size:144px"></i></a>
+          <a id="paper"><i class="fa fa-hand-paper-o button" style="font-size:144px"></i></a>
+          <a id="scissors"><i class="fa fa-hand-peace-o" style="font-size:144px"></i></a>
         </div>
         <div>
           <h4>Computer Choice</h4>
@@ -37,6 +40,9 @@
         </div>
       </div>
       <div id="result"></div>
+  </div>
+  <div class="cal">
+    <i class="fa fa-refresh fa-spin" style="font-size:144px"></i>
   </div>
 
   <!-- Link JQuery here -->
