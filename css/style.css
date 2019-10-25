@@ -1,13 +1,29 @@
-.row{
-  text-align:center;
-
-}
 #choices{
   display:flex;
-  justify-content:space-between;
+  justify-content:space-around;
+}
 
+div{
+  text-align:center
 }
 
 body{
+  text-align: center;
   font-family: 'Ubuntu', sans-serif;
+  background-color: #f2f0f0;
+  color: black;
+  background-size: 100%
+}
+
+a{
+    color: black;
+    background-color: #f2f0f0;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 43.2px;
+    padding-top: 120px;
+}
+
+a:hover{
+    background-color: rgb(231, 231, 231);
 }

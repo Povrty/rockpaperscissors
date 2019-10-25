@@ -4,9 +4,8 @@
 
 //GLOBAL VARIABLES
 /* global $ */
-$("#shoot").click(function() {
-    let input = $("#input").val();
-    $("#userChoice").text(input);
+$(".rock").click(function() {
+    $("#userChoice").text();
 });
 
 
