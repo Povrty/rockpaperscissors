@@ -13,15 +13,15 @@ $(".rock").click(function() {
     $("#rock").show();
     $("#paper").hide();
     $("#scissors").hide();
-    $(".cal").show();
-    $(".cal").delay(5000).hide();
+    $(".cal").fadeIn(2500);
+    $(".cal").delay(2500).fadeOut();
 });
 $(".paper").click(function() {
     $("#paper").show();
     $("#rock").hide();
     $("#scissors").hide();
-    $(".cal").show();
-    $(".cal").delay(5000).hide();
+    $(".cal").fadeIn(2500);
+    $(".cal").delay(2500).fadeOut();
 });
 $(".scissors").click(function() {
     $("#scissors").show();
@@ -32,6 +32,7 @@ $(".scissors").click(function() {
 });
 
 var chance = Math.random();
+
 
 // DOCUMENT READY FUNCTION BELOW
 
