@@ -6,27 +6,13 @@ $("#paperC").hide();
 $("#scissorsC").hide();
 $("h4").hide();
 
-function Rock() {
-    $("#rock").show();
-    $("#paper").hide();
-    $("#scissors").hide();
-    $("h4").show();
-    return "rockU";
-}
 
-function Paper() {
-    $("#paper").show();
-    $("#rock").hide();
-    $("#scissors").hide();
+function Move(one, two, three) {
+    $("#" + one).show();
+    $("#" + two).hide();
+    $("#" + three).hide();
     $("h4").show();
-    return "paperU";
-}
-function Scissors() {
-    $("#scissors").show();
-    $("#rock").hide();
-    $("#paper").hide();
-    $("h4").show();
-    return "scissorsU";
+    return  one + "U";
 }
 
 function Computer() {
@@ -49,34 +35,39 @@ function Computer() {
     }
 }
 
-function Winner {
-    if (answerUr === "rockU" && answerCr === "rockC" || answerUp === "paperU" && answerCp === "paperC" || answerUs === "scissorsU" && answerCs === "scissorsC") {
-        alert();
+function Winner() {
+    if ($("#rock").is(":visible") && $("#scissorsC").is(":visible") || $("#paper").is(":visible") && $("#rockC").is(":visible") || $("#scissors").is(":visible") && $("#paperC").is(":visible")) {
+        alert("You win!");
+    } else if ($("#rock").is(":visible") && $("#rockC").is(":visible") || $("#paper").is(":visible") && $("#paperC").is(":visible") || $("#scissors").is(":visible") && $("#scissorsC").is(":visible")){
+        alert("Tie!")
+    } else {
+        alert("You lose!")
     }
 }
+$("#clear").click(function(){
+    location.reload();
+})
 
 $(".rock").click(function() {
-    Rock();
+    Move("rock","paper","scissors");
     Computer();
-    var answerUr = Rock();
-    console.log(answerUr);
-    var answerCr = Computer();
-    console.log(answerCr);
+    console.log("Rock");
+    console.log(Computer());
+    Winner();
 });
 $(".paper").click(function() {
-    Paper();
+    Move("paper","rock","scissors");
     Computer();
-    var answerUp = Paper();
-    console.log(answerUp);
-    var answerCp = Computer();
-    console.log(answerCp);
+    console.log("Paper");
+    console.log(Computer());
+    Winner();
 });
 $(".scissors").click(function() {
-    Scissors();
+    Move("scissors","paper","rock");
     Computer();
-    var answerUs = Scissors();
-    console.log(answerUs);
-    var answerCs = Computer();
-    console.log(answerCs);
+    console.log("Scissors");
+    console.log(Computer());
+    Winner();
 });
+
 
